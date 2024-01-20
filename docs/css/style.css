@@ -1,0 +1,450 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body {
+/* font-family */
+	font-family: 'Montserrat', sans-serif;
+	background-color: black;
+	overflow-x : hidden;
+}
+
+img {
+/* 화질개선	*/
+	image-rendering: -webkit-optimize-contrast;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+/* library */
+.bd {
+	border: 2px solid black;
+}
+.bd2 {
+	border: 2px solid red;
+}
+.bd3 {
+	border: 2px solid green;
+}
+.bd4 {
+	border: 2px solid blue;
+}
+.bd5 {
+	border: 2px solid purple;
+}
+
+.con {
+	max-width : var(--con-width);
+	margin: 0 auto;
+}
+
+/* custom */
+:root {
+	--con-width : 1200px ;
+	--body-bgc : #fff ;
+}
+
+.top_bar {
+	position: fixed;
+	left : 50%;
+	transform : translatex(-50%);
+	top : 30px;
+	width : 850px;
+	height : 40px;
+	background-color: white;
+	border-radius : 50px;
+	display: flex;
+	align-items : center;
+	justify-content : center;
+	z-index : 9;
+}
+
+.top_bar_logo {
+	font-size : 2rem;
+	white-space : nowrap;
+}
+
+.main_text_box {
+	position: relative;
+	width: 100%;
+	height:100vh;
+	display: flex;
+	align-items : center;
+	justify-content : center;
+	text-align : center;
+}
+
+.main_text {
+	color : white;
+	font-size : 10rem;
+	white-space : nowrap;
+	line-height : 160px;
+}
+
+.main_text > span:nth-of-type(1) {
+	color : #56B995;
+	position: relative;
+}
+.main_text > span:nth-of-type(2) {
+	color : #D8E94B;
+	position: relative;
+}
+
+.main_text > span:nth-of-type(1):after {
+	content : "";
+	position: absolute;
+	left : -5px;
+	top : 50;
+	width : 105%;
+	height : 150px;
+	background-color: #56B995;
+	border-radius : 50px;
+	transition : width .5s;
+}
+.main_text > span:nth-of-type(1):hover:after{
+	width : 0;
+}
+
+.main_text > span:nth-of-type(2):after {
+	content : "";
+	position: absolute;
+	left : -3px;
+	top : 50;
+	width : 100%;
+	height : 150px;
+	background-color: #D8E94B;
+	border-radius : 25px;
+	transition : height .5s;
+}
+
+.main_text > span:nth-of-type(2):hover:after{
+	height : 0;
+}
+
+.bento_grid_box_con {
+	position: relative;
+	left : 50%;
+	transform : translatex(-50%);
+	width : 1420px;
+	height : 100vh;
+	background-color: black;
+	display: flex;
+	flex-direction : column;
+	gap : 10px;
+}
+
+.bento_box_bundle {
+	width: 100%;
+	height : 200px;
+	display: flex;
+	align-items : center;
+	justify-content : center;
+	gap : 10px;
+}
+
+.bento_box {
+	width : 19%;
+	height : 100%;
+	background-color: #212121;
+	border-radius : 15px;
+	color : white;
+	font-size : 1.5rem;
+	padding-left : 20px;
+	padding-top: 15px;
+	animation : bento_box_effect both ;
+	animation-timeline : view();
+	animation-range : cover 5% cover 30%;\
+	z-index : -1;
+}
+@keyframes bento_box_effect {
+	0% {
+		transform : scale(0);
+	}
+	100% {
+		transform : scale(1);
+	}
+}
+
+.imfor_bento {
+	display: flex;
+	align-items : center;
+	justify-content : center;
+	padding : 0;
+}
+
+.bento_box1 {
+	height : 300px;
+	margin-top: 100px;
+	background-color: white;
+	color : black;
+	font-size : 13rem;
+}
+.bento_box1:after {
+	content : "At a hospital in Jeju \A\A Born 2005-04-01 \A\A That's April Fool's Day! \A\A But it wasn't a lie that I was born :)";
+}
+
+.bento_box7 {
+	width : 28.5%;
+	background-color: #56B995;
+	color : rgba(255,255,255,.8);
+	border-radius : 500px;
+	font-size : 12rem;
+}
+.bento_box7:after {
+	content : "One day my parents asked me\A\A“Do you like Mom or Dad?”\A\AI was naive and said, “I like my mom!”\A\A From the next day,\A\AI came to live with my mother.";
+}
+
+.bento_box14 {
+	background-color: #56B995;
+	color : rgba(255,255,255,.8);
+	width : 28.5%;
+	height : 300px;
+	margin-bottom: 100px;
+	font-size : 16rem;
+}
+.bento_box14:after {
+	content : "Age of 14, I bought a certain book\A\AThe name of the book is 'The Having'\A\AThis bookwas the first in my life to enable me\A\A to converse with my inner self\A\A From this time, I began to\A\A feel interested in the fields of\A\A philosophy and self-development\A\AI began to explore about myself";
+}
+
+.bento_box17 {
+	background-color: white;
+	color : black;
+	width : 9.3%;
+	height : 400px;
+	margin-top: 200px;
+	font-size : 10rem;
+	border-radius : 500px;
+}
+.bento_box17:after {
+	content:"Upon becoming a high school student \A\A and joining the band club, \A\AI began to walk the path of music\A\AHowever, \A\AI felt very sorry for burdening \A\Amy family with academy fees \A\Athat were more expensive than rent.\A\AI really loved music,,,";
+}
+
+.bento_box18 {
+	background-color: white;
+	color : black;
+	height : 400px;
+	margin-top: 200px;
+	font-size : 14rem;
+}
+.bento_box18:after {
+	content : "Let's fully pursue music after achieving financial freedom\A\AWith that in mind,\A\A I searched for ways to achieve financial freedom\A\ATherefore,\A\A I began to study stocks and economics with\A\A full dedication";
+}
+.bento_box17 *,.bento_box18 *,.bento_box19 * {
+	transform : rotate(90deg);
+}
+
+.bento_box19 {
+	background-color: white;
+	color : black;
+	height : 500px;
+	margin-top: 100px;
+	font-size : 15rem;
+}
+.bento_box19:after {
+	content : "For these reasons,\A\A I left my hometown to board at a \Avocational school where I studied accounting\A\A However, accounting just didn't suit me as a person,\A\A and I found it very difficult\A This led me to rethink what I truly enjoy and\A excel at Ultimately, after much contemplation,\A\A I have chosen the field of\A front-end development and am moving towards my goal";
+}
+
+.bento_box20 {
+	background-color: #D8E94B;
+	color : rgba(255,255,255,.8);
+	width : 39%;
+	height : 400px;
+	margin-top: 200px;
+	font-size : 20rem;
+}
+.bento_box20:after {
+	content : "And 135 days have passed\A\A I will get one step closer to my goal by applying to Nonce\A\AI am a person who has spent a lot of time thinking about myself\A\AI believe in my potential\A\A in this field and want to take advantage of the opportunity.";
+}
+
+
+.bento_box:after {
+	position: absolute;
+	backdrop-filter : blur(30px);
+	border-radius : 50px;
+	height : 0;
+	transition : height .5s, border .5s;
+	overflow : hidden;
+	color : white;
+	align-items : center;
+	display: flex;
+	align-items : center;
+	justify-content : center;
+	width : 800px;
+	height : 0px;
+	white-space:pre;
+	font-size : 1.3rem;
+	text-align : center;
+}
+.bento_box:hover:after {
+	height : 500px;
+	border: .1px solid rgba(255,255,255,.3);
+}
+
+.bento_box7:after,.bento_box14:after {
+ background-color: rgba(86, 185, 149 ,.2);
+	left :;
+	top : -350px;
+	left : -350px;
+}
+
+.bento_box1:after,.bento_box17:after,.bento_box18:after,
+.bento_box19:after{
+ background-color: rgba(255, 255, 255 ,.05);
+	left :;
+	top : -150px;
+	left : -450px;
+}
+.bento_box1:after {
+	width : 500px;
+	top : -250px;
+	left : -250px;
+}
+.bento_box17:after {
+	width : 500px;
+	top : -150px;
+	left : -390px;
+}
+
+.bento_box20:after {
+	background-color: rgba(216, 233, 75 ,.2);
+	top : -150px;
+	left : -250px;
+}
+
+
+/* black_bento_box */
+
+.bento_box6 {
+	height : 100px;
+	margin-top: 100px;
+}
+
+.bento_box8 {
+	width : 9.5%;
+}
+
+.bento_box9 {
+	height : 100px;
+	margin-bottom: 100px;
+}
+
+.bento_box10 {
+	height : 100px;
+	margin-bottom: 100px;
+}
+
+.bento_box13 {
+	height : 100px;
+	margin-bottom: 100px;
+}
+
+.bento_box15 {
+	width : 9.5%;
+	height : 300px;
+	margin-bottom: 100px;
+}
+
+.bento_box16  {
+	width : 9.3%;
+	margin-bottom: 100px;
+	margin-top: 100px;
+}
+/* glass_box */
+.glass_box {
+	position: absolute;
+	width: 700px;
+	height: 500px;
+	background-color: rgba(0,0,0,.8);
+	border-radius : 50px;
+	z-index : 9;
+}
+
+.main_text2 {
+	font-size : 9rem;
+	margin: 600px 0;
+	text-align : center;
+}
+
+.botoom_bento_grid_box_con {
+	width : 100%;
+	height : 50vh;
+	display: flex;
+	flex-direction : column;
+	gap : 10px;
+	margin-bottom: 0;
+}
+
+.bottom_bento_box_bundle {
+	width: 100%;
+	height : 200px;
+	display: flex;
+	align-items : center;
+	justify-content : center;
+	gap : 10px;
+}
+
+.bottom_bento {
+	width : 19%;
+	height : 100%;
+	background-color: #212121;
+	border-radius : 15px;
+	color : white;
+	font-size : 1.5rem;
+	padding-left : 20px;
+	padding-top: 15px;
+}
+
+.bottom_bento3 {
+	background-color: #56B995;
+	height : 100px;
+	margin-bottom: 100px;
+}
+
+.bottom_bento7 {
+	background-color: white;
+	color : black;
+	font-size : 2rem;
+}
+.bottom_bento7 > *:hover {
+	box-shadow : 0px 0px 5px rgba(0,0,0,0.3)
+}
+.bottom_bento7 > * {
+		border-radius : 50%;
+	padding : 2px 6px;
+	transition : box-shadow .3s;
+}
+
+.bottom_bento8 {
+	background-color: #D8E94B;
+	height : 300px;
+	margin-bottom: 100px;
+}
+
+.bottom_bento8 > * {
+	border-radius : 50px;
+	padding : 10px 10px;
+	transition : background-color .3s, color .3s;
+}
+.bottom_bento8 > *:hover {
+	background-color: black;
+	color : white
+}
+
+/* black_bottom_bento */
+
+.bottom_bento2 {
+	width : 38.5%;
+	height : 100px;
+	margin-bottom: 100px;
+}
+
+.bottom_bento6 {
+	height : 300px;
+	margin-bottom: 100px;
+}
+
+
+.bottom_bento9 {
+	height : 300px;
+	margin-bottom: 100px;
+}
+
